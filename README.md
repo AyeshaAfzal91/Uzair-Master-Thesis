@@ -22,7 +22,7 @@
 | Thesis listed on the website | TODO |
 | GitHub access | DONE |
 | Student added to the mailing list (hpcplus@fau.de) | TODO |
-| Weekly meetings (MON at 1 p.m.): calendar invitation set up | TODO |
+| Weekly meetings (MON at 1 p.m.): calendar invitation set up | DONE |
 | Matrix room for chat (create an account at matrix.org) | DONE |
 | Access to HPC systems (Fritz/Alex/Helma/testcluster) at NHR@FAU (Portal: https://portal.hpc.fau.de; login: `ssh -Y ihpcXXXh@fritz.nhr.fau.de`) | TODO |
 
