@@ -49,6 +49,7 @@
 - Deadline-constrained VLA inference across vendors
 
 ### Reference Papers (running knobs: freq scaling and power capping)
+- **Jump task**: https://github.com/AyeshaAfzal91/Uzair-Master-Thesis/tree/main/JumpTask 
 - **LLM:** https://arxiv.org/abs/2605.11999
   - Hardware: NVIDIA H200
   - LLM models: GQA, MLA, Gated DeltaNet, and Mamba2
