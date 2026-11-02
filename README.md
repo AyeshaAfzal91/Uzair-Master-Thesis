@@ -45,7 +45,6 @@
 ### AI Benchmarks 
 - Vision
 - Diffusion
-- Promptable vision foundation models: SAM 3 / SAM 3D
 - Deadline-constrained VLA inference across vendors
 
 ### Reference Papers (running knobs: freq scaling and power capping)
@@ -56,7 +55,6 @@
 - **AI:** https://arxiv.org/abs/2603.16164
   - Hardware: NVIDIA H100, NVIDIA H200, and AMD MI300X GPUs
   - AI model: a benchmarking framework with popular deep learning applications from computer vision (image classification and generation) and large language models (continued pre-training and inference) implementing modern methods.
-
 
 
   
