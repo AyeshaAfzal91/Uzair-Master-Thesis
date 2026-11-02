@@ -39,13 +39,23 @@
 ## Thesis Context 
 
 ### Hardware
-- Multi-GPUs?
-- H100/H200 Helma or Testcluster GPUs?
+- GPUs: Helma H100 or Testcluster
+- Multi-GPUs
 
-### Applications (compute-bound and/or memory-bound)
+### AI Benchmarks 
+- Vision
+- Diffusion
+- Promptable vision foundation models: SAM 3 / SAM 3D
+- Deadline-constrained VLA inference across vendors
 
-#### AI Benchmarks from Computer Vision
-- **FLUX1 dev:** https://huggingface.co/black-forest-labs/FLUX.1-dev
-- **ResNet-50:** https://huggingface.co/microsoft/resnet-50
+### Reference Papers (running knobs: freq scaling and power capping)
+- **LLM:** https://arxiv.org/abs/2605.11999
+  - Hardware: NVIDIA H200
+  - LLM models: GQA, MLA, Gated DeltaNet, and Mamba2
+- **AI:** https://arxiv.org/abs/2603.16164
+  - Hardware: NVIDIA H100, NVIDIA H200, and AMD MI300X GPUs
+  - AI model: a benchmarking framework with popular deep learning applications from computer vision (image classification and generation) and large language models (continued pre-training and inference) implementing modern methods.
+
+
 
   
