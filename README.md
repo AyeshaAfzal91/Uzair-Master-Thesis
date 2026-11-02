@@ -46,6 +46,7 @@
 - Vision
 - Diffusion
 - Deadline-constrained VLA inference across vendors
+- details at https://github.com/AyeshaAfzal91/Uzair-Master-Thesis/blob/main/MSc%20Thesis%20Proposals.docx
 
 ### Reference Papers (running knobs: freq scaling and power capping)
 - **Jump task**: https://github.com/AyeshaAfzal91/Uzair-Master-Thesis/tree/main/JumpTask 
