@@ -13,7 +13,7 @@
 | FAU | uzair.khan@fau.de |
 | Gmail | 123uzairahmad@gmail.com |
 | GitHub | https://github.com/uzairkhan9 |
-| Matrix | TODO |
+| Matrix | @fo35wohe:fau.de |
 
 ### Status Overview
 
