@@ -5,7 +5,7 @@ Nov 8
 - 
 
 Nov 2
-* All administrative work done
-* Topic proposed. Need to review by Uzair
-* Start with Helma 100 with any proposed AI benchmark domain
-* Progress to diuscussed in next week 
+- All administrative work has been completed.
+- The topic has been proposed and is pending review by Uzair.
+- Start with Helma 100, incorporating any proposed AI benchmark domain.
+- Further progress and discussion will take place next week.
