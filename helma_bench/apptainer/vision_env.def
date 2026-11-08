@@ -1,0 +1,6 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:26.10-py3
+
+%post
+    apt-get update && apt-get install -y --no-install-recommends wget
+    pip install --no-cache-dir torchvision timm pandas numpy matplotlib
