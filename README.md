@@ -6,7 +6,7 @@
 - Always commit the latest results to GitHub.
 - Always use the updated software version available.
 
-### Student Email and Accounts/username
+### Uzair Haroon Khan: Email and Accounts/username
 
 | Account | Address |
 |---------|---------|
