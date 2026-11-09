@@ -2,6 +2,8 @@ Nov 8
 * DONE
 - Account setup, helma access completed
 - Connection established, temp workspace created for 90 days (/hnvme/workspace/ihpc180h-thesis_bench)
+- Wrote some basic script for Resnet50
+- NEED: Access to change TDP and Clock speed
 * TODO
 - 
 
