@@ -6,13 +6,16 @@ Plots from a bench_vision.py results CSV (repeats are averaged):
   throughput.png      images per second vs batch size
   energy.png          joules per image vs batch size
   power.png           average GPU power vs batch size (with the power limit)
+  work_vs_energy.png  GFLOPs per image vs J per image (only for CSVs made by add_flops.py)
 
 Usage:  python plot_frontier.py results/vision_fp32_<jobid>.csv
+        python plot_frontier.py results/vision_fp32_<jobid>_flops.csv   (adds work_vs_energy.png)
 Images are saved next to the CSV.
 
 Needs timm's accuracy table once (login node):
   wget -P timm_results https://raw.githubusercontent.com/huggingface/pytorch-image-models/main/results/results-imagenet.csv
 """
+import math
 import os
 import sys
 
@@ -46,7 +49,7 @@ plt.rcParams.update({
 raw = pd.read_csv(csv)
 df = raw[raw.status == "ok"]
 df = df.groupby(["model", "img_size", "batch_size"], as_index=False)[
-    ["img_per_s", "ms_per_batch", "avg_power_W", "J_per_img"]].mean()
+    [c for c in ["img_per_s", "ms_per_batch", "avg_power_W", "J_per_img", "achieved_TFLOPs"] if c in raw]].mean()
 power_limit = raw.power_limit_W.iloc[0]
 gpu = raw.gpu.iloc[0]
 precision = "FP32 (TF32 math)" if raw.get("tf32", pd.Series([False])).iloc[0] else "FP32"
@@ -144,4 +147,49 @@ batch_plot("img_per_s", "Throughput (images / s)", "Throughput", "throughput.png
 batch_plot("J_per_img", "Energy per image (J)", "Energy per image", "energy.png")
 batch_plot("avg_power_W", "Average GPU power (W)", "GPU power", "power.png", limit=power_limit)
 
-print(f"saved frontier.png, throughput.png, energy.png, power.png in {out_dir}")
+saved = "frontier.png, throughput.png, energy.png, power.png"
+
+
+# ---- 5. work vs energy (only for CSVs made by add_flops.py) --------------------
+# x = work per image (GFLOPs), y = energy per image (J), each model at its best batch size.
+# If energy only depended on work, all models would lie on one straight line.
+# Grey lines mark constant efficiency (GFLOP per joule): further down-right = more efficient.
+def work_vs_energy_plot():
+    b = best.copy()
+    b["gflops_per_img"] = b.achieved_TFLOPs * 1000 / b.img_per_s
+    b["gflop_per_J"] = b.gflops_per_img / b.J_per_img
+    print("\nEfficiency at best batch size (GFLOP per joule):")
+    print(b[["model", "gflops_per_img", "J_per_img", "gflop_per_J"]].round(3).to_string(index=False))
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    xmax, ymax = b.gflops_per_img.max() * 1.15, b.J_per_img.max() * 1.15
+    for eff in (50, 100, 200, 300):          # GFLOP per joule
+        x_end = min(xmax, ymax * eff)        # where the line leaves the plot
+        ax.plot([0, x_end], [0, x_end / eff], color="#c9c8c2", linewidth=1, zorder=1)
+        # label sits on the middle of its line, tilted along it, on a small white patch
+        x_lab = 0.55 * x_end
+        ax.text(x_lab, x_lab / eff, f"{eff} GFLOP/J", color="#7a7974", fontsize=9,
+                ha="center", va="center", rotation=math.degrees(math.atan2(1 / eff, 1)),
+                transform_rotates_text=True, rotation_mode="anchor",
+                bbox=dict(facecolor="white", edgecolor="none", pad=1.5), zorder=2)
+    for _, r in b.iterrows():
+        hollow = r.model in HOLLOW
+        ax.scatter(r.gflops_per_img, r.J_per_img, s=90, marker=marker(r.model), zorder=3,
+                   facecolor="white" if hollow else color(r.model), edgecolor=color(r.model),
+                   linewidth=2 if hollow else 1,
+                   label=f"{name(r.model)}  ({r.gflop_per_J:.0f} GFLOP/J)")
+    ax.set_xlim(0, xmax)
+    ax.set_ylim(0, ymax)
+    ax.grid(False)  # the grey efficiency lines are the guides here
+    ax.set_xlabel("Work per image (GFLOPs)")
+    ax.set_ylabel("Energy per image (J)")
+    ax.set_title(f"Work vs energy, best batch size  ·  {gpu}, {precision}", loc="left")
+    legend_outside(ax)
+    fig.savefig(os.path.join(out_dir, "work_vs_energy.png"))
+    plt.close(fig)
+
+
+if "achieved_TFLOPs" in df:
+    work_vs_energy_plot()
+    saved += ", work_vs_energy.png"
+print(f"saved {saved} in {out_dir}")
