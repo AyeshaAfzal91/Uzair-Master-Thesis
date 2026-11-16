@@ -22,14 +22,15 @@ here = os.path.dirname(os.path.abspath(__file__))
 # average the repeats
 df = pd.read_csv(csv)
 df = df[df.status == "ok"]
-df = df.groupby(["model", "batch_size"], as_index=False)[
+df = df.groupby(["model", "img_size", "batch_size"], as_index=False)[
     ["img_per_s", "ms_per_batch", "avg_power_W", "J_per_img", "sm_clock_MHz", "power_capped_frac"]].mean()
 
-# timm's published accuracy (measured at the same input size we benchmark)
-acc = pd.read_csv(os.path.join(here, "timm_results", "results-imagenet.csv"))[["model", "top1"]]
+# timm's published accuracy. The table has one row per (model, input size),
+# so match on both: e.g. resnet50.a1_in1k is 80.4 % at 224 px but 81.2 % at 288 px.
+acc = pd.read_csv(os.path.join(here, "timm_results", "results-imagenet.csv"))[["model", "img_size", "top1"]]
 
 # ---- 1. frontier: each model at the batch size with the lowest J/img
-best = df.loc[df.groupby("model").J_per_img.idxmin()].merge(acc, on="model")
+best = df.loc[df.groupby("model").J_per_img.idxmin()].merge(acc, on=["model", "img_size"])
 best = best.sort_values("J_per_img")
 best["on_frontier"] = best.top1 >= best.top1.cummax()  # nothing cheaper is more accurate
 print(best[["model", "batch_size", "img_per_s", "J_per_img", "avg_power_W", "top1", "on_frontier"]]
