@@ -5,8 +5,15 @@ Nov 16
 - Benchmark ran on single node H100
 - Result graphs for throughput, energy, power and frontier generated
 * TODO
--
-
+- Understand and find out for batch 1, which kernels used for compute, how much time and does it scales with batch size
+- types of kernels used in different models, convulution, reduction, track which kernels are dispatched by pytorch realtime
+- step size difference must be cosistent
+- use raw data and fix batch size for frontier
+- find out key differences between convulution and transformer computes, memory bound stages, is attention cheaper, look at different cnns and difference, vision tower
+- until what batch size can we push these models
+- error and out files
+- folder organisation
+- study lengths of compute and differences, where the time and bottlenecks, compute or memory bound, batch size scaling
 
 Nov 8
 * DONE
