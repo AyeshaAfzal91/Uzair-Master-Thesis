@@ -1,3 +1,13 @@
+Nov 16
+* DONE
+- Added 7 models from timm's library and proposal
+- Benchmark script created with same config as timm
+- Benchmark ran on single node H100
+- Result graphs for throughput, energy, power and frontier generated
+* TODO
+-
+
+
 Nov 8
 * DONE
 - Account setup, helma access completed
