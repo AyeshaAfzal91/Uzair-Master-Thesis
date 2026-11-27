@@ -1,0 +1,138 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 05:13:32.250008551 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:13:32.371341135 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 05:36:18.912486847 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:36:19.819781434 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:36:39.349552811 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:36:40.879997401 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:36:41.565315371 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:36:42.970116297 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 05:36:45.831638927 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 05:59:15.943960467 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 21364736, total: 99963305984).
+[W1127 05:59:15.019689037 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 21364736, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 06:22:44.291864668 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+[W1127 06:22:44.308427671 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/http_proxy.py", line 288, in handle_request
+    connect_response = self._connection.handle_request(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/lib/python3.12/dist-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2/bench_vision.py", line 234, in <module>
+    main()
+  File "/hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2/bench_vision.py", line 222, in main
+    run_model(a.model, a.out, a.max_batch)
+  File "/hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2/bench_vision.py", line 159, in run_model
+    model = timm.create_model(name, pretrained=True).cuda().eval()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/timm/models/_factory.py", line 230, in create_model
+    model = create_fn(
+            ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/timm/models/vision_transformer.py", line 3450, in vit_small_patch16_224
+    model = _create_vision_transformer('vit_small_patch16_224', pretrained=pretrained, **dict(model_args, **kwargs))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/timm/models/vision_transformer.py", line 3398, in _create_vision_transformer
+    return build_model_with_cfg(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/timm/models/_builder.py", line 504, in build_model_with_cfg
+    load_pretrained(
+  File "/usr/local/lib/python3.12/dist-packages/timm/models/_builder.py", line 232, in load_pretrained
+    state_dict = load_state_dict_from_hf(pretrained_loc, weights_only=True, cache_dir=cache_dir)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/timm/models/_hub.py", line 254, in load_state_dict_from_hf
+    cached_safe_file = hf_hub_download(
+                       ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1047, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1117, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1762, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py", line 1669, in get_hf_file_metadata
+    response = _httpx_follow_hub_redirects_with_backoff(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 754, in _httpx_follow_hub_redirects_with_backoff
+    response = http_backoff(
+               ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 627, in http_backoff
+    return next(
+           ^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py", line 535, in _http_backoff_base
+    response = client.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/lib/python3.12/dist-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [Errno 104] Connection reset by peer
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 06:49:28.001170144 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 19267584, total: 99963305984).
+[W1127 06:49:28.202957564 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 21364736, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 07:15:47.620701905 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 19267584, total: 99963305984).
+[W1127 07:15:47.824917076 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 21364736, total: 99963305984).

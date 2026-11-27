@@ -1,0 +1,234 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+USDT:2026-11-27 07:16:23 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:23 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:16:28 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:28 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:16:34 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:34 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:16:39 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:39 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:16:45 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:45 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:16:50 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:50 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:16:56 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:16:56 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:17:02 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:17:02 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:17:10 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:17:10 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:17:20 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:17:21 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:17:36 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:17:37 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:18:06 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:18:08 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:18:30.401474973 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 8781824, total: 99963305984).
+[W1127 07:19:00.755302611 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 8781824, total: 99963305984).
+USDT:2026-11-27 07:19:02 2299854:2299854 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:06 2299854:2299854 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:19:17.555018122 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+[W1127 07:19:17.683659058 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+USDT:2026-11-27 07:19:34 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:34 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:19:39 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:39 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:19:44 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:44 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:19:49 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:49 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:19:54 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:54 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:19:59 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:19:59 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:20:05 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:20:05 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:20:12 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:20:13 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:20:22 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:20:22 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:20:35 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:20:35 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:20:57 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:20:58 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:21:22.063076089 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+[W1127 07:21:35.324733586 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+USDT:2026-11-27 07:21:36 2300726:2300726 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:21:38 2300726:2300726 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:21:59.711136020 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:21:59.138977744 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:18.657754181 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:18.103353277 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:19.536550012 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:20.934250939 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:20.366339137 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:22.764773132 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:22.195943603 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:24.595107756 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:24.025438990 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:25.425408620 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:27.648272494 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12976128, total: 99963305984).
+[W1127 07:22:27.364583513 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+[W1127 07:22:28.793686280 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+[W1127 07:22:30.715237619 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10878976, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+USDT:2026-11-27 07:22:49 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:22:49 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:22:55 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:22:55 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:01 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:01 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:06 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:06 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:12 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:12 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:18 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:18 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:25 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:25 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:32 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:32 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:41 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:41 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:23:53 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:23:54 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:24:14 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:24:16 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:24:32.439272770 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 6684672, total: 99963305984).
+[W1127 07:24:49.356239395 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+USDT:2026-11-27 07:24:51 2301598:2301598 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:24:55 2301598:2301598 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:25:04.866870588 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 6684672, total: 99963305984).
+[W1127 07:25:04.946960079 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 6684672, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+USDT:2026-11-27 07:25:17 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:17 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:22 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:22 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:26 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:26 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:31 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:31 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:36 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:36 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:41 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:41 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:45 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:46 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:51 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:51 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:25:56 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:25:57 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:26:03 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:26:04 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:26:13 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:26:14 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:26:28 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:26:29 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:26:37.035115446 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 15073280, total: 99963305984).
+[W1127 07:26:52.310055833 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 15073280, total: 99963305984).
+USDT:2026-11-27 07:26:54 2301991:2301991 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:26:57 2301991:2301991 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:27:00.529590569 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 17170432, total: 99963305984).
+[W1127 07:27:00.546064917 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 19267584, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+USDT:2026-11-27 07:27:12 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:12 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:17 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:17 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:21 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:21 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:26 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:26 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:31 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:31 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:36 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:36 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:41 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:41 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:45 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:46 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:50 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:51 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:27:56 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:27:56 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:28:03 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:28:04 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:28:14 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:28:15 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:28:29 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:28:31 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:28:55 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:28:57 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:29:13.758277402 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 19267584, total: 99963305984).
+[W1127 07:29:40.036407852 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 19267584, total: 99963305984).
+USDT:2026-11-27 07:29:42 2302336:2302336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:29:48 2302336:2302336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:29:56.596333227 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 19267584, total: 99963305984).
+[W1127 07:29:56.769388869 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 21364736, total: 99963305984).
+USDT:2026-11-27 07:30:13 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:13 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:18 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:18 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:23 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:23 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:28 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:28 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:33 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:33 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:38 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:38 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:43 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:43 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:48 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:48 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:30:54 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:30:54 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:31:02 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:31:02 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:31:12 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:31:13 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:31:29 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:31:31 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:31:58 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:32:02 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:32:19.577732492 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 07:32:50.246874901 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+USDT:2026-11-27 07:32:53 2303336:2303336 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:32:59 2303336:2303336 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:33:06.318576810 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 07:33:07.523570753 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 6684672, total: 99963305984).
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+USDT:2026-11-27 07:33:20 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:20 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:25 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:25 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:29 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:29 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:34 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:34 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:40 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:40 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:45 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:45 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:49 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:49 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:33:55 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:33:55 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:34:00 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:34:01 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:34:08 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:34:08 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:34:19 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:34:19 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:34:36 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:34:37 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-27 07:35:05 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:35:08 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:35:25.845344663 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 07:35:56.467428015 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+USDT:2026-11-27 07:35:59 2303745:2303745 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-27 07:36:06 2303745:2303745 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1127 07:36:13.551030334 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4587520, total: 99963305984).
+[W1127 07:36:13.754017223 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 6684672, total: 99963305984).

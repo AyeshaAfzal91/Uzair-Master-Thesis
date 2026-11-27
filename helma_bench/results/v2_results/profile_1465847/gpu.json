@@ -1,0 +1,10 @@
+{
+  "gpu": "NVIDIA H100",
+  "memory_GB": 99.963305984,
+  "sm_count": 132,
+  "sm_clock_max_MHz": 1980,
+  "peak_tf32_TFLOPs": 535.26528,
+  "peak_dram_GBps": 2395.872,
+  "torch": "2.15.0a0+875d815502.nv26.10",
+  "cuda": "13.4"
+}

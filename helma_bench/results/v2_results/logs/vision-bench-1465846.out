@@ -1,0 +1,320 @@
+### Starting TaskPrologue of job 1465846 on h11-23 at Fri Nov 27 04:49:04 AM CET 2026
+Running on cores 96-127 with governor performance
+Fri Nov 27 04:49:04 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 620.70.06              KMD Version: 620.70.06     CUDA UMD Version: 13.5     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:A6:00.0 Off |                    0 |
+| N/A   36C    P0             68W /  500W |       0MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Fri Nov 27 04:49:04 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 620.70.06              KMD Version: 620.70.06     CUDA UMD Version: 13.5     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:A6:00.0 Off |                    0 |
+| N/A   36C    P0             68W /  500W |       0MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+resnet50.a1_in1k  (288px, 25.6M params, 13.52 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 68 W
+  bs      1 |    1111.0 img/s |      0.90 ms/batch |   303 W |  272.416 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |    1111.1 img/s |      0.90 ms/batch |   304 W |  273.283 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |    1111.0 img/s |      0.90 ms/batch |   304 W |  273.573 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    1854.7 img/s |      1.08 ms/batch |   378 W |  203.905 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    1855.1 img/s |      1.08 ms/batch |   377 W |  203.463 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    1855.2 img/s |      1.08 ms/batch |   379 W |  204.491 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      4 |    2722.3 img/s |      1.47 ms/batch |   469 W |  172.374 mJ/img |  1980 MHz | capped   0% |   0.7 GB
+  bs      4 |    2721.5 img/s |      1.47 ms/batch |   463 W |  170.060 mJ/img |  1980 MHz | capped   0% |   0.7 GB
+  bs      4 |    2721.2 img/s |      1.47 ms/batch |   464 W |  170.688 mJ/img |  1980 MHz | capped   0% |   0.7 GB
+  bs      8 |    3122.6 img/s |      2.56 ms/batch |   500 W |  159.972 mJ/img |  1958 MHz | capped 100% |   0.3 GB
+  bs      8 |    3120.6 img/s |      2.56 ms/batch |   498 W |  159.576 mJ/img |  1961 MHz | capped  97% |   0.3 GB
+  bs      8 |    3120.6 img/s |      2.56 ms/batch |   499 W |  159.754 mJ/img |  1946 MHz | capped  96% |   0.3 GB
+  bs     16 |    3132.4 img/s |      5.11 ms/batch |   497 W |  158.670 mJ/img |  1972 MHz | capped  28% |   0.4 GB
+  bs     16 |    3132.9 img/s |      5.11 ms/batch |   499 W |  159.243 mJ/img |  1936 MHz | capped  95% |   0.4 GB
+  bs     16 |    3132.7 img/s |      5.11 ms/batch |   500 W |  159.472 mJ/img |  1928 MHz | capped  98% |   0.4 GB
+  bs     32 |    3036.0 img/s |     10.54 ms/batch |   489 W |  160.929 mJ/img |  1980 MHz | capped   0% |   0.7 GB
+  bs     32 |    3035.9 img/s |     10.54 ms/batch |   488 W |  160.674 mJ/img |  1980 MHz | capped   0% |   0.7 GB
+  bs     32 |    3036.1 img/s |     10.54 ms/batch |   487 W |  160.320 mJ/img |  1980 MHz | capped   0% |   0.7 GB
+  bs     64 |    3011.6 img/s |     21.25 ms/batch |   484 W |  160.738 mJ/img |  1977 MHz | capped  15% |   1.4 GB
+  bs     64 |    3011.1 img/s |     21.25 ms/batch |   487 W |  161.636 mJ/img |  1972 MHz | capped  33% |   1.4 GB
+  bs     64 |    3010.8 img/s |     21.26 ms/batch |   487 W |  161.816 mJ/img |  1971 MHz | capped  34% |   1.4 GB
+  bs    128 |    3031.0 img/s |     42.23 ms/batch |   495 W |  163.281 mJ/img |  1957 MHz | capped  98% |   2.6 GB
+  bs    128 |    3030.8 img/s |     42.23 ms/batch |   494 W |  163.073 mJ/img |  1955 MHz | capped  97% |   2.6 GB
+  bs    128 |    3030.9 img/s |     42.23 ms/batch |   495 W |  163.256 mJ/img |  1956 MHz | capped  98% |   2.6 GB
+  bs    256 |    3055.9 img/s |     83.77 ms/batch |   491 W |  160.749 mJ/img |  1947 MHz | capped 100% |   5.1 GB
+  bs    256 |    3055.8 img/s |     83.78 ms/batch |   491 W |  160.582 mJ/img |  1947 MHz | capped  98% |   5.1 GB
+  bs    256 |    3055.9 img/s |     83.77 ms/batch |   491 W |  160.600 mJ/img |  1948 MHz | capped  99% |   5.1 GB
+  bs    512 |    3062.2 img/s |    167.20 ms/batch |   491 W |  160.384 mJ/img |  1954 MHz | capped 100% |  10.1 GB
+  bs    512 |    3062.6 img/s |    167.18 ms/batch |   489 W |  159.830 mJ/img |  1954 MHz | capped  99% |  10.1 GB
+  bs    512 |    3061.9 img/s |    167.21 ms/batch |   489 W |  159.697 mJ/img |  1954 MHz | capped  98% |  10.1 GB
+  bs   1024 |    3065.9 img/s |    334.00 ms/batch |   489 W |  159.560 mJ/img |  1949 MHz | capped 100% |  20.1 GB
+  bs   1024 |    3066.1 img/s |    333.98 ms/batch |   491 W |  160.120 mJ/img |  1950 MHz | capped 100% |  20.1 GB
+  bs   1024 |    3065.6 img/s |    334.03 ms/batch |   489 W |  159.605 mJ/img |  1948 MHz | capped 100% |  20.1 GB
+  bs   2048 |    2989.1 img/s |    685.15 ms/batch |   494 W |  165.270 mJ/img |  1890 MHz | capped 100% |  40.2 GB
+  bs   2048 |    2989.6 img/s |    685.05 ms/batch |   495 W |  165.569 mJ/img |  1889 MHz | capped 100% |  40.2 GB
+  bs   2048 |    2989.3 img/s |    685.12 ms/batch |   495 W |  165.655 mJ/img |  1892 MHz | capped 100% |  40.2 GB
+  bs   4096 |    2905.3 img/s |   1409.84 ms/batch |   494 W |  169.935 mJ/img |  1847 MHz | capped 100% |  80.3 GB
+  bs   4096 |    2905.9 img/s |   1409.54 ms/batch |   494 W |  169.968 mJ/img |  1850 MHz | capped 100% |  80.3 GB
+  bs   4096 |    2905.7 img/s |   1409.66 ms/batch |   493 W |  169.773 mJ/img |  1848 MHz | capped 100% |  80.3 GB
+  bs   8192 | OOM -> largest batch for this model: 4096
+convnext_tiny.in12k_ft_in1k  (288px, 28.6M params, 14.73 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 69 W
+  bs      1 |    1464.1 img/s |      0.68 ms/batch |   352 W |  240.567 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |    1463.9 img/s |      0.68 ms/batch |   352 W |  240.132 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |    1463.9 img/s |      0.68 ms/batch |   352 W |  240.234 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    2205.9 img/s |      0.91 ms/batch |   417 W |  189.166 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      2 |    2205.5 img/s |      0.91 ms/batch |   418 W |  189.416 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      2 |    2206.3 img/s |      0.91 ms/batch |   419 W |  189.795 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    2895.1 img/s |      1.38 ms/batch |   482 W |  166.332 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    2891.7 img/s |      1.38 ms/batch |   481 W |  166.367 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    2891.7 img/s |      1.38 ms/batch |   481 W |  166.214 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      8 |    3100.4 img/s |      2.58 ms/batch |   485 W |  156.399 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs      8 |    3100.7 img/s |      2.58 ms/batch |   487 W |  156.921 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs      8 |    3101.0 img/s |      2.58 ms/batch |   487 W |  156.937 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs     16 |    3138.6 img/s |      5.10 ms/batch |   500 W |  159.292 mJ/img |  1900 MHz | capped 100% |   0.5 GB
+  bs     16 |    3139.7 img/s |      5.10 ms/batch |   496 W |  158.063 mJ/img |  1958 MHz | capped  96% |   0.5 GB
+  bs     16 |    3139.8 img/s |      5.10 ms/batch |   497 W |  158.238 mJ/img |  1958 MHz | capped  98% |   0.5 GB
+  bs     32 |    3084.3 img/s |     10.38 ms/batch |   498 W |  161.475 mJ/img |  1936 MHz | capped 100% |   0.8 GB
+  bs     32 |    3084.2 img/s |     10.38 ms/batch |   497 W |  161.124 mJ/img |  1935 MHz | capped  98% |   0.8 GB
+  bs     32 |    3083.5 img/s |     10.38 ms/batch |   497 W |  161.256 mJ/img |  1933 MHz | capped  97% |   0.8 GB
+  bs     64 |    3074.1 img/s |     20.82 ms/batch |   499 W |  162.295 mJ/img |  1918 MHz | capped 100% |   1.6 GB
+  bs     64 |    3072.9 img/s |     20.83 ms/batch |   499 W |  162.358 mJ/img |  1918 MHz | capped  98% |   1.6 GB
+  bs     64 |    3074.0 img/s |     20.82 ms/batch |   498 W |  162.137 mJ/img |  1919 MHz | capped  99% |   1.6 GB
+  bs    128 |    3082.7 img/s |     41.52 ms/batch |   494 W |  160.305 mJ/img |  1909 MHz | capped 100% |   3.0 GB
+  bs    128 |    3082.4 img/s |     41.53 ms/batch |   494 W |  160.239 mJ/img |  1906 MHz | capped 100% |   3.0 GB
+  bs    128 |    3080.8 img/s |     41.55 ms/batch |   495 W |  160.729 mJ/img |  1903 MHz | capped 100% |   3.0 GB
+  bs    256 |    3090.4 img/s |     82.84 ms/batch |   492 W |  159.140 mJ/img |  1907 MHz | capped 100% |   6.0 GB
+  bs    256 |    3089.3 img/s |     82.87 ms/batch |   492 W |  159.212 mJ/img |  1903 MHz | capped 100% |   6.0 GB
+  bs    256 |    3088.2 img/s |     82.90 ms/batch |   492 W |  159.476 mJ/img |  1906 MHz | capped 100% |   6.0 GB
+  bs    512 |    3093.2 img/s |    165.53 ms/batch |   491 W |  158.790 mJ/img |  1898 MHz | capped 100% |  11.8 GB
+  bs    512 |    3092.7 img/s |    165.55 ms/batch |   490 W |  158.577 mJ/img |  1898 MHz | capped 100% |  11.8 GB
+  bs    512 |    3092.1 img/s |    165.58 ms/batch |   490 W |  158.600 mJ/img |  1897 MHz | capped 100% |  11.8 GB
+  bs   1024 |    3090.8 img/s |    331.31 ms/batch |   489 W |  158.301 mJ/img |  1891 MHz | capped 100% |  23.6 GB
+  bs   1024 |    3092.2 img/s |    331.16 ms/batch |   489 W |  158.257 mJ/img |  1895 MHz | capped 100% |  23.6 GB
+  bs   1024 |    3091.9 img/s |    331.19 ms/batch |   489 W |  158.218 mJ/img |  1889 MHz | capped 100% |  23.6 GB
+  bs   2048 |    3103.5 img/s |    659.90 ms/batch |   487 W |  156.975 mJ/img |  1889 MHz | capped 100% |  47.0 GB
+  bs   2048 |    3102.2 img/s |    660.17 ms/batch |   486 W |  156.715 mJ/img |  1884 MHz | capped  99% |  47.0 GB
+  bs   2048 |    3103.8 img/s |    659.84 ms/batch |   487 W |  156.881 mJ/img |  1891 MHz | capped 100% |  47.0 GB
+  bs   4096 | OOM -> largest batch for this model: 2048
+tf_efficientnetv2_s.in21k_ft_in1k  (384px, 21.5M params, 16.73 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 69 W
+  bs      1 |     534.5 img/s |      1.87 ms/batch |   256 W |  478.226 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |     534.8 img/s |      1.87 ms/batch |   256 W |  479.365 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |     534.8 img/s |      1.87 ms/batch |   256 W |  479.525 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |     828.1 img/s |      2.42 ms/batch |   321 W |  387.510 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |     827.6 img/s |      2.42 ms/batch |   319 W |  385.994 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |     827.7 img/s |      2.42 ms/batch |   320 W |  386.640 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      4 |    1210.2 img/s |      3.31 ms/batch |   412 W |  340.341 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    1210.3 img/s |      3.30 ms/batch |   413 W |  341.548 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    1210.5 img/s |      3.30 ms/batch |   414 W |  341.887 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      8 |    1462.7 img/s |      5.47 ms/batch |   466 W |  318.288 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs      8 |    1462.7 img/s |      5.47 ms/batch |   465 W |  317.584 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs      8 |    1462.7 img/s |      5.47 ms/batch |   465 W |  317.657 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs     16 |    1485.6 img/s |     10.77 ms/batch |   495 W |  333.488 mJ/img |  1971 MHz | capped  60% |   0.6 GB
+  bs     16 |    1485.4 img/s |     10.77 ms/batch |   495 W |  333.221 mJ/img |  1970 MHz | capped  65% |   0.6 GB
+  bs     16 |    1485.2 img/s |     10.77 ms/batch |   496 W |  334.120 mJ/img |  1969 MHz | capped  69% |   0.6 GB
+  bs     32 |    1426.1 img/s |     22.44 ms/batch |   496 W |  347.798 mJ/img |  1929 MHz | capped 100% |   1.1 GB
+  bs     32 |    1426.6 img/s |     22.43 ms/batch |   495 W |  346.907 mJ/img |  1932 MHz | capped  99% |   1.1 GB
+  bs     32 |    1426.1 img/s |     22.44 ms/batch |   497 W |  348.552 mJ/img |  1929 MHz | capped  99% |   1.1 GB
+  bs     64 |    1449.3 img/s |     44.16 ms/batch |   497 W |  342.837 mJ/img |  1913 MHz | capped 100% |   2.1 GB
+  bs     64 |    1449.1 img/s |     44.17 ms/batch |   497 W |  342.765 mJ/img |  1911 MHz | capped 100% |   2.1 GB
+  bs     64 |    1449.3 img/s |     44.16 ms/batch |   496 W |  342.372 mJ/img |  1914 MHz | capped  98% |   2.1 GB
+  bs    128 |    1512.4 img/s |     84.63 ms/batch |   496 W |  327.717 mJ/img |  1871 MHz | capped 100% |   4.1 GB
+  bs    128 |    1512.2 img/s |     84.65 ms/batch |   497 W |  328.685 mJ/img |  1872 MHz | capped 100% |   4.1 GB
+  bs    128 |    1512.3 img/s |     84.64 ms/batch |   497 W |  328.920 mJ/img |  1872 MHz | capped 100% |   4.1 GB
+  bs    256 |    1522.3 img/s |    168.17 ms/batch |   496 W |  326.064 mJ/img |  1848 MHz | capped 100% |   8.1 GB
+  bs    256 |    1521.9 img/s |    168.22 ms/batch |   496 W |  326.023 mJ/img |  1847 MHz | capped 100% |   8.1 GB
+  bs    256 |    1522.1 img/s |    168.19 ms/batch |   496 W |  325.853 mJ/img |  1851 MHz | capped 100% |   8.1 GB
+  bs    512 |    1532.5 img/s |    334.10 ms/batch |   497 W |  324.067 mJ/img |  1826 MHz | capped 100% |  16.1 GB
+  bs    512 |    1532.1 img/s |    334.18 ms/batch |   496 W |  323.728 mJ/img |  1826 MHz | capped 100% |  16.1 GB
+  bs    512 |    1532.4 img/s |    334.12 ms/batch |   497 W |  324.605 mJ/img |  1830 MHz | capped 100% |  16.1 GB
+  bs   1024 |    1534.1 img/s |    667.47 ms/batch |   497 W |  324.121 mJ/img |  1832 MHz | capped 100% |  32.1 GB
+  bs   1024 |    1534.2 img/s |    667.46 ms/batch |   497 W |  324.015 mJ/img |  1833 MHz | capped 100% |  32.1 GB
+  bs   1024 |    1533.9 img/s |    667.56 ms/batch |   497 W |  324.053 mJ/img |  1830 MHz | capped 100% |  32.1 GB
+  bs   2048 |    1511.4 img/s |   1355.08 ms/batch |   496 W |  328.000 mJ/img |  1818 MHz | capped 100% |  64.1 GB
+  bs   2048 |    1511.5 img/s |   1354.92 ms/batch |   497 W |  329.024 mJ/img |  1815 MHz | capped 100% |  64.1 GB
+  bs   2048 |    1511.6 img/s |   1354.88 ms/batch |   496 W |  327.961 mJ/img |  1819 MHz | capped 100% |  64.1 GB
+  bs   4096 | OOM -> largest batch for this model: 2048
+swin_tiny_patch4_window7_224.ms_in1k  (224px, 28.3M params, 8.98 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 70 W
+  bs      1 |    1121.4 img/s |      0.89 ms/batch |   261 W |  232.509 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      1 |    1122.3 img/s |      0.89 ms/batch |   265 W |  235.960 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      1 |    1122.2 img/s |      0.89 ms/batch |   264 W |  235.208 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      2 |    1936.1 img/s |      1.03 ms/batch |   326 W |  168.308 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      2 |    1936.0 img/s |      1.03 ms/batch |   325 W |  167.801 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      2 |    1935.8 img/s |      1.03 ms/batch |   324 W |  167.342 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    2978.6 img/s |      1.34 ms/batch |   403 W |  135.182 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    2977.1 img/s |      1.34 ms/batch |   400 W |  134.387 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      4 |    2979.1 img/s |      1.34 ms/batch |   401 W |  134.622 mJ/img |  1980 MHz | capped   0% |   0.2 GB
+  bs      8 |    3919.1 img/s |      2.04 ms/batch |   492 W |  125.583 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs      8 |    3917.9 img/s |      2.04 ms/batch |   491 W |  125.243 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs      8 |    3917.6 img/s |      2.04 ms/batch |   491 W |  125.251 mJ/img |  1980 MHz | capped   0% |   0.3 GB
+  bs     16 |    4182.6 img/s |      3.83 ms/batch |   499 W |  119.378 mJ/img |  1903 MHz | capped 100% |   0.4 GB
+  bs     16 |    4178.3 img/s |      3.83 ms/batch |   498 W |  119.280 mJ/img |  1904 MHz | capped  98% |   0.4 GB
+  bs     16 |    4178.4 img/s |      3.83 ms/batch |   499 W |  119.331 mJ/img |  1902 MHz | capped  99% |   0.4 GB
+  bs     32 |    4074.5 img/s |      7.85 ms/batch |   499 W |  122.484 mJ/img |  1854 MHz | capped 100% |   0.6 GB
+  bs     32 |    4077.7 img/s |      7.85 ms/batch |   499 W |  122.395 mJ/img |  1855 MHz | capped  99% |   0.6 GB
+  bs     32 |    4078.3 img/s |      7.85 ms/batch |   498 W |  122.016 mJ/img |  1854 MHz | capped 100% |   0.6 GB
+  bs     64 |    3960.1 img/s |     16.16 ms/batch |   499 W |  125.942 mJ/img |  1828 MHz | capped 100% |   1.2 GB
+  bs     64 |    3962.6 img/s |     16.15 ms/batch |   498 W |  125.692 mJ/img |  1864 MHz | capped 100% |   1.2 GB
+  bs     64 |    3962.1 img/s |     16.15 ms/batch |   497 W |  125.453 mJ/img |  1864 MHz | capped 100% |   1.2 GB
+  bs    128 |    3911.0 img/s |     32.73 ms/batch |   497 W |  127.103 mJ/img |  1857 MHz | capped 100% |   2.2 GB
+  bs    128 |    3911.3 img/s |     32.73 ms/batch |   497 W |  127.146 mJ/img |  1859 MHz | capped 100% |   2.2 GB
+  bs    128 |    3911.9 img/s |     32.72 ms/batch |   497 W |  127.150 mJ/img |  1834 MHz | capped 100% |   2.2 GB
+  bs    256 |    3933.3 img/s |     65.09 ms/batch |   498 W |  126.540 mJ/img |  1843 MHz | capped 100% |   4.2 GB
+  bs    256 |    3933.5 img/s |     65.08 ms/batch |   496 W |  126.086 mJ/img |  1842 MHz | capped 100% |   4.2 GB
+  bs    256 |    3933.3 img/s |     65.08 ms/batch |   496 W |  126.037 mJ/img |  1844 MHz | capped 100% |   4.2 GB
+  bs    512 |    3951.9 img/s |    129.56 ms/batch |   495 W |  125.291 mJ/img |  1828 MHz | capped 100% |   8.2 GB
+  bs    512 |    3953.7 img/s |    129.50 ms/batch |   496 W |  125.352 mJ/img |  1830 MHz | capped 100% |   8.2 GB
+  bs    512 |    3953.1 img/s |    129.52 ms/batch |   495 W |  125.214 mJ/img |  1832 MHz | capped 100% |   8.2 GB
+  bs   1024 |    3968.4 img/s |    258.04 ms/batch |   498 W |  125.409 mJ/img |  1797 MHz | capped 100% |  16.2 GB
+  bs   1024 |    3967.1 img/s |    258.12 ms/batch |   496 W |  125.152 mJ/img |  1814 MHz | capped 100% |  16.2 GB
+  bs   1024 |    3967.7 img/s |    258.09 ms/batch |   495 W |  124.781 mJ/img |  1807 MHz | capped 100% |  16.2 GB
+  bs   2048 |    3960.7 img/s |    517.08 ms/batch |   495 W |  125.015 mJ/img |  1797 MHz | capped 100% |  32.3 GB
+  bs   2048 |    3960.8 img/s |    517.07 ms/batch |   495 W |  125.064 mJ/img |  1801 MHz | capped 100% |  32.3 GB
+  bs   2048 |    3960.4 img/s |    517.12 ms/batch |   495 W |  124.892 mJ/img |  1800 MHz | capped 100% |  32.3 GB
+  bs   4096 |    3960.5 img/s |   1034.21 ms/batch |   493 W |  124.584 mJ/img |  1793 MHz | capped 100% |  64.4 GB
+  bs   4096 |    3960.7 img/s |   1034.16 ms/batch |   493 W |  124.507 mJ/img |  1797 MHz | capped 100% |  64.4 GB
+  bs   4096 |    3961.1 img/s |   1034.05 ms/batch |   493 W |  124.466 mJ/img |  1797 MHz | capped 100% |  64.4 GB
+  bs   8192 | OOM -> largest batch for this model: 4096
+vit_base_patch16_224.augreg_in1k  (224px, 86.6M params, 35.13 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 69 W
+  bs      1 |     996.6 img/s |      1.00 ms/batch |   392 W |  393.746 mJ/img |  1980 MHz | capped   0% |   0.4 GB
+  bs      1 |     998.6 img/s |      1.00 ms/batch |   394 W |  394.706 mJ/img |  1980 MHz | capped   0% |   0.4 GB
+  bs      1 |     998.6 img/s |      1.00 ms/batch |   395 W |  395.087 mJ/img |  1980 MHz | capped   0% |   0.4 GB
+  bs      2 |    1839.9 img/s |      1.09 ms/batch |   498 W |  270.544 mJ/img |  1894 MHz | capped 100% |   0.4 GB
+  bs      2 |    1837.5 img/s |      1.09 ms/batch |   498 W |  271.054 mJ/img |  1893 MHz | capped  98% |   0.4 GB
+  bs      2 |    1837.2 img/s |      1.09 ms/batch |   499 W |  271.375 mJ/img |  1888 MHz | capped  99% |   0.4 GB
+  bs      4 |    2707.1 img/s |      1.48 ms/batch |   497 W |  183.693 mJ/img |  1729 MHz | capped 100% |   0.4 GB
+  bs      4 |    2706.9 img/s |      1.48 ms/batch |   499 W |  184.196 mJ/img |  1735 MHz | capped 100% |   0.4 GB
+  bs      4 |    2706.1 img/s |      1.48 ms/batch |   499 W |  184.293 mJ/img |  1735 MHz | capped 100% |   0.4 GB
+  bs      8 |    3402.2 img/s |      2.35 ms/batch |   495 W |  145.432 mJ/img |  1694 MHz | capped 100% |   0.4 GB
+  bs      8 |    3402.5 img/s |      2.35 ms/batch |   495 W |  145.473 mJ/img |  1694 MHz | capped 100% |   0.4 GB
+  bs      8 |    3403.2 img/s |      2.35 ms/batch |   495 W |  145.388 mJ/img |  1695 MHz | capped 100% |   0.4 GB
+  bs     16 |    3550.4 img/s |      4.51 ms/batch |   494 W |  139.177 mJ/img |  1659 MHz | capped 100% |   0.5 GB
+  bs     16 |    3552.1 img/s |      4.50 ms/batch |   495 W |  139.228 mJ/img |  1660 MHz | capped 100% |   0.5 GB
+  bs     16 |    3552.4 img/s |      4.50 ms/batch |   496 W |  139.688 mJ/img |  1660 MHz | capped 100% |   0.5 GB
+  bs     32 |    3599.4 img/s |      8.89 ms/batch |   495 W |  137.447 mJ/img |  1627 MHz | capped 100% |   0.6 GB
+  bs     32 |    3599.6 img/s |      8.89 ms/batch |   495 W |  137.502 mJ/img |  1627 MHz | capped 100% |   0.6 GB
+  bs     32 |    3599.0 img/s |      8.89 ms/batch |   495 W |  137.410 mJ/img |  1626 MHz | capped 100% |   0.6 GB
+  bs     64 |    3591.1 img/s |     17.82 ms/batch |   495 W |  137.928 mJ/img |  1586 MHz | capped 100% |   0.8 GB
+  bs     64 |    3591.5 img/s |     17.82 ms/batch |   495 W |  137.939 mJ/img |  1586 MHz | capped 100% |   0.8 GB
+  bs     64 |    3591.9 img/s |     17.82 ms/batch |   496 W |  137.979 mJ/img |  1587 MHz | capped 100% |   0.8 GB
+  bs    128 |    3662.6 img/s |     34.95 ms/batch |   497 W |  135.607 mJ/img |  1550 MHz | capped 100% |   1.4 GB
+  bs    128 |    3658.2 img/s |     34.99 ms/batch |   497 W |  135.856 mJ/img |  1553 MHz | capped 100% |   1.4 GB
+  bs    128 |    3662.7 img/s |     34.95 ms/batch |   496 W |  135.519 mJ/img |  1546 MHz | capped 100% |   1.4 GB
+  bs    256 |    3761.7 img/s |     68.06 ms/batch |   498 W |  132.506 mJ/img |  1488 MHz | capped 100% |   2.4 GB
+  bs    256 |    3754.9 img/s |     68.18 ms/batch |   498 W |  132.546 mJ/img |  1495 MHz | capped 100% |   2.4 GB
+  bs    256 |    3753.0 img/s |     68.21 ms/batch |   499 W |  132.942 mJ/img |  1498 MHz | capped 100% |   2.4 GB
+  bs    512 |    3765.2 img/s |    135.98 ms/batch |   498 W |  132.158 mJ/img |  1482 MHz | capped 100% |   4.4 GB
+  bs    512 |    3761.0 img/s |    136.14 ms/batch |   497 W |  132.113 mJ/img |  1487 MHz | capped 100% |   4.4 GB
+  bs    512 |    3763.4 img/s |    136.05 ms/batch |   499 W |  132.631 mJ/img |  1485 MHz | capped 100% |   4.4 GB
+  bs   1024 |    3772.8 img/s |    271.41 ms/batch |   498 W |  131.950 mJ/img |  1488 MHz | capped 100% |   8.4 GB
+  bs   1024 |    3771.6 img/s |    271.51 ms/batch |   499 W |  132.348 mJ/img |  1493 MHz | capped 100% |   8.4 GB
+  bs   1024 |    3775.7 img/s |    271.21 ms/batch |   500 W |  132.437 mJ/img |  1488 MHz | capped 100% |   8.4 GB
+  bs   2048 |    3772.4 img/s |    542.89 ms/batch |   497 W |  131.737 mJ/img |  1482 MHz | capped 100% |  16.5 GB
+  bs   2048 |    3765.1 img/s |    543.94 ms/batch |   497 W |  132.062 mJ/img |  1491 MHz | capped 100% |  16.5 GB
+  bs   2048 |    3766.1 img/s |    543.80 ms/batch |   497 W |  132.057 mJ/img |  1491 MHz | capped 100% |  16.5 GB
+  bs   4096 |    3753.9 img/s |   1091.12 ms/batch |   499 W |  132.998 mJ/img |  1498 MHz | capped 100% |  32.6 GB
+  bs   4096 |    3752.5 img/s |   1091.53 ms/batch |   499 W |  132.989 mJ/img |  1505 MHz | capped 100% |  32.6 GB
+  bs   4096 |    3754.1 img/s |   1091.08 ms/batch |   499 W |  132.987 mJ/img |  1507 MHz | capped 100% |  32.6 GB
+  bs   8192 |    3713.1 img/s |   2206.27 ms/batch |   492 W |  132.464 mJ/img |  1507 MHz | capped 100% |  64.8 GB
+  bs   8192 |    3712.9 img/s |   2206.38 ms/batch |   491 W |  132.372 mJ/img |  1505 MHz | capped 100% |  64.8 GB
+  bs   8192 |    3715.4 img/s |   2204.85 ms/batch |   492 W |  132.356 mJ/img |  1500 MHz | capped 100% |  64.8 GB
+  bs  16384 | OOM -> largest batch for this model: 8192
+vit_base_patch16_224.augreg2_in21k_ft_in1k  (224px, 86.6M params, 35.13 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 70 W
+  bs      1 |    1000.9 img/s |      1.00 ms/batch |   395 W |  394.666 mJ/img |  1980 MHz | capped   0% |   0.4 GB
+  bs      1 |    1001.2 img/s |      1.00 ms/batch |   398 W |  397.992 mJ/img |  1980 MHz | capped   0% |   0.4 GB
+  bs      1 |    1001.1 img/s |      1.00 ms/batch |   396 W |  395.750 mJ/img |  1980 MHz | capped   0% |   0.4 GB
+  bs      2 |    1844.8 img/s |      1.08 ms/batch |   499 W |  270.286 mJ/img |  1901 MHz | capped 100% |   0.4 GB
+  bs      2 |    1844.1 img/s |      1.08 ms/batch |   498 W |  270.185 mJ/img |  1900 MHz | capped  98% |   0.4 GB
+  bs      2 |    1843.7 img/s |      1.08 ms/batch |   500 W |  271.028 mJ/img |  1900 MHz | capped  98% |   0.4 GB
+  bs      4 |    2708.7 img/s |      1.48 ms/batch |   499 W |  184.224 mJ/img |  1729 MHz | capped 100% |   0.4 GB
+  bs      4 |    2709.0 img/s |      1.48 ms/batch |   499 W |  184.232 mJ/img |  1734 MHz | capped 100% |   0.4 GB
+  bs      4 |    2709.0 img/s |      1.48 ms/batch |   499 W |  184.042 mJ/img |  1735 MHz | capped 100% |   0.4 GB
+  bs      8 |    3405.3 img/s |      2.35 ms/batch |   495 W |  145.380 mJ/img |  1695 MHz | capped 100% |   0.4 GB
+  bs      8 |    3406.2 img/s |      2.35 ms/batch |   495 W |  145.450 mJ/img |  1696 MHz | capped 100% |   0.4 GB
+  bs      8 |    3405.5 img/s |      2.35 ms/batch |   495 W |  145.272 mJ/img |  1696 MHz | capped 100% |   0.4 GB
+  bs     16 |    3553.5 img/s |      4.50 ms/batch |   495 W |  139.246 mJ/img |  1661 MHz | capped 100% |   0.5 GB
+  bs     16 |    3555.5 img/s |      4.50 ms/batch |   495 W |  139.294 mJ/img |  1661 MHz | capped 100% |   0.5 GB
+  bs     16 |    3555.4 img/s |      4.50 ms/batch |   495 W |  139.317 mJ/img |  1660 MHz | capped 100% |   0.5 GB
+  bs     32 |    3599.3 img/s |      8.89 ms/batch |   495 W |  137.507 mJ/img |  1627 MHz | capped 100% |   0.6 GB
+  bs     32 |    3601.7 img/s |      8.88 ms/batch |   495 W |  137.424 mJ/img |  1628 MHz | capped 100% |   0.6 GB
+  bs     32 |    3600.3 img/s |      8.89 ms/batch |   495 W |  137.376 mJ/img |  1628 MHz | capped 100% |   0.6 GB
+  bs     64 |    3592.6 img/s |     17.81 ms/batch |   496 W |  138.022 mJ/img |  1586 MHz | capped 100% |   0.8 GB
+  bs     64 |    3593.4 img/s |     17.81 ms/batch |   496 W |  137.955 mJ/img |  1590 MHz | capped 100% |   0.8 GB
+  bs     64 |    3592.0 img/s |     17.82 ms/batch |   496 W |  137.984 mJ/img |  1587 MHz | capped 100% |   0.8 GB
+  bs    128 |    3660.9 img/s |     34.96 ms/batch |   496 W |  135.529 mJ/img |  1549 MHz | capped 100% |   1.4 GB
+  bs    128 |    3664.1 img/s |     34.93 ms/batch |   497 W |  135.551 mJ/img |  1550 MHz | capped 100% |   1.4 GB
+  bs    128 |    3661.4 img/s |     34.96 ms/batch |   496 W |  135.521 mJ/img |  1553 MHz | capped 100% |   1.4 GB
+  bs    256 |    3748.7 img/s |     68.29 ms/batch |   498 W |  132.748 mJ/img |  1505 MHz | capped 100% |   2.4 GB
+  bs    256 |    3745.5 img/s |     68.35 ms/batch |   498 W |  132.837 mJ/img |  1510 MHz | capped 100% |   2.4 GB
+  bs    256 |    3747.2 img/s |     68.32 ms/batch |   498 W |  132.817 mJ/img |  1507 MHz | capped 100% |   2.4 GB
+  bs    512 |    3747.7 img/s |    136.62 ms/batch |   497 W |  132.582 mJ/img |  1504 MHz | capped 100% |   4.4 GB
+  bs    512 |    3747.2 img/s |    136.64 ms/batch |   497 W |  132.583 mJ/img |  1506 MHz | capped 100% |   4.4 GB
+  bs    512 |    3748.6 img/s |    136.58 ms/batch |   497 W |  132.657 mJ/img |  1503 MHz | capped 100% |   4.4 GB
+  bs   1024 |    3775.2 img/s |    271.24 ms/batch |   498 W |  131.831 mJ/img |  1495 MHz | capped 100% |   8.4 GB
+  bs   1024 |    3772.5 img/s |    271.44 ms/batch |   497 W |  131.784 mJ/img |  1495 MHz | capped 100% |   8.4 GB
+  bs   1024 |    3772.4 img/s |    271.45 ms/batch |   497 W |  131.780 mJ/img |  1496 MHz | capped 100% |   8.4 GB
+  bs   2048 |    3765.8 img/s |    543.84 ms/batch |   497 W |  131.998 mJ/img |  1492 MHz | capped 100% |  16.5 GB
+  bs   2048 |    3764.9 img/s |    543.98 ms/batch |   497 W |  132.075 mJ/img |  1493 MHz | capped 100% |  16.5 GB
+  bs   2048 |    3767.5 img/s |    543.60 ms/batch |   498 W |  132.130 mJ/img |  1488 MHz | capped 100% |  16.5 GB
+  bs   4096 |    3747.8 img/s |   1092.91 ms/batch |   499 W |  133.012 mJ/img |  1509 MHz | capped 100% |  32.6 GB
+  bs   4096 |    3752.4 img/s |   1091.57 ms/batch |   499 W |  132.871 mJ/img |  1507 MHz | capped 100% |  32.6 GB
+  bs   4096 |    3748.1 img/s |   1092.81 ms/batch |   498 W |  132.923 mJ/img |  1513 MHz | capped 100% |  32.6 GB
+  bs   8192 |    3712.5 img/s |   2206.61 ms/batch |   491 W |  132.155 mJ/img |  1508 MHz | capped 100% |  64.8 GB
+  bs   8192 |    3711.9 img/s |   2206.94 ms/batch |   492 W |  132.534 mJ/img |  1508 MHz | capped 100% |  64.8 GB
+  bs   8192 |    3713.3 img/s |   2206.12 ms/batch |   491 W |  132.128 mJ/img |  1506 MHz | capped 100% |  64.8 GB
+  bs  16384 | OOM -> largest batch for this model: 8192
+
+results: /hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/results/v2_results/bench_1465846/bench.csv
+FAILED: ['vit_small_patch16_224.augreg_in21k_ft_in1k']
+=== JOB_STATISTICS ===
+=== current date     : Fri Nov 27 07:15:51 CET 2026
+= Job-ID             : 1465846 on helma
+= Job-Name           : vision-bench
+= Job-Command        : /hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2/run_bench.sbatch
+= Initial workdir    : /hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2
+= Queue/Partition    : h100
+= Slurm account      : ihpc with QOS=normal
+= Requested resources: cpu=32,mem=175G,node=1,billing=32,gres/gpu=1,gres/gpu:h100=1 for 06:00:00
+= Elapsed runtime    : 02:26:53
+= Total RAM usage    : 5.5 GiB of assigned 175 GiB (3.1%)
+= Node list          : h11-23
+= Subm/Elig/Start/End: 2026-11-27T04:48:50 / 2026-11-27T04:48:50 / 2026-11-27T04:48:58 / 2026-11-27T07:15:51
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/hpc              23.5G   104.9G   209.7G        N/A     173      300K     400K        N/A    
+    /hnvme                 23.2G     0.0K     0.0K        N/A     520       61K      81K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA H100, 00000000:A6:00.0, 3689634, 97 %, 70 %, 95318 MiB, 1457907 ms
+NVIDIA H100, 00000000:A6:00.0, 3694050, 97 %, 51 %, 95318 MiB, 1386342 ms
+NVIDIA H100, 00000000:A6:00.0, 3708675, 96 %, 59 %, 95302 MiB, 1344190 ms
+NVIDIA H100, 00000000:A6:00.0, 3733994, 98 %, 60 %, 95312 MiB, 1403225 ms
+NVIDIA H100, 00000000:A6:00.0, 3741614, 98 %, 49 %, 95304 MiB, 1574267 ms
+NVIDIA H100, 00000000:A6:00.0, 3747898, 98 %, 49 %, 95304 MiB, 1572574 ms
