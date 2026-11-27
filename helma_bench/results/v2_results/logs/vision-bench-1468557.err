@@ -1,0 +1,3 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[W1127 12:17:07.850548025 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 22282240, total: 99951706112).
+[W1127 12:17:07.042863133 CUDACachingAllocator.cpp:608] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 3407872, total: 99951706112).

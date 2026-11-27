@@ -1,0 +1,117 @@
+### Starting TaskPrologue of job 1468557 on h14-03 at Fri Nov 27 11:49:18 AM CET 2026
+Running on cores 32-63 with governor performance
+Fri Nov 27 11:49:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.91.07              Driver Version: 595.91.07      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:26:00.0 Off |                    0 |
+| N/A   36C    P0             70W /  500W |       0MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Fri Nov 27 11:49:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.91.07              Driver Version: 595.91.07      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100                    On  |   00000000:26:00.0 Off |                    0 |
+| N/A   36C    P0             70W /  500W |       0MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+vit_small_patch16_224.augreg_in21k_ft_in1k  (224px, 22.1M params, 9.20 GFLOPs/img) | GPU NVIDIA H100 | power limit 500 W | idle 71 W
+  bs      1 |    1221.6 img/s |      0.82 ms/batch |   245 W |  200.710 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |    1273.3 img/s |      0.79 ms/batch |   251 W |  197.118 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      1 |    1314.9 img/s |      0.76 ms/batch |   255 W |  193.925 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    2527.4 img/s |      0.79 ms/batch |   325 W |  128.549 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    2527.1 img/s |      0.79 ms/batch |   323 W |  127.858 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      2 |    2527.5 img/s |      0.79 ms/batch |   325 W |  128.546 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      4 |    4572.9 img/s |      0.87 ms/batch |   427 W |   93.434 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      4 |    4573.0 img/s |      0.87 ms/batch |   426 W |   93.120 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      4 |    4573.0 img/s |      0.87 ms/batch |   427 W |   93.378 mJ/img |  1980 MHz | capped   0% |   0.1 GB
+  bs      8 |    6508.1 img/s |      1.23 ms/batch |   500 W |   76.776 mJ/img |  1896 MHz | capped 100% |   0.1 GB
+  bs      8 |    6506.9 img/s |      1.23 ms/batch |   499 W |   76.725 mJ/img |  1899 MHz | capped  99% |   0.1 GB
+  bs      8 |    6509.5 img/s |      1.23 ms/batch |   499 W |   76.714 mJ/img |  1899 MHz | capped  99% |   0.1 GB
+  bs     16 |    8007.7 img/s |      2.00 ms/batch |   499 W |   62.310 mJ/img |  1731 MHz | capped 100% |   0.2 GB
+  bs     16 |    8008.3 img/s |      2.00 ms/batch |   499 W |   62.299 mJ/img |  1729 MHz | capped 100% |   0.2 GB
+  bs     16 |    8010.9 img/s |      2.00 ms/batch |   498 W |   62.192 mJ/img |  1721 MHz | capped 100% |   0.2 GB
+  bs     32 |    8376.4 img/s |      3.82 ms/batch |   499 W |   59.546 mJ/img |  1670 MHz | capped 100% |   0.2 GB
+  bs     32 |    8448.7 img/s |      3.79 ms/batch |   498 W |   58.995 mJ/img |  1665 MHz | capped 100% |   0.2 GB
+  bs     32 |    8475.3 img/s |      3.78 ms/batch |   500 W |   58.994 mJ/img |  1660 MHz | capped 100% |   0.2 GB
+  bs     64 |    8340.9 img/s |      7.67 ms/batch |   497 W |   59.582 mJ/img |  1724 MHz | capped 100% |   0.4 GB
+  bs     64 |    8351.1 img/s |      7.66 ms/batch |   496 W |   59.403 mJ/img |  1720 MHz | capped 100% |   0.4 GB
+  bs     64 |    8344.6 img/s |      7.67 ms/batch |   497 W |   59.573 mJ/img |  1724 MHz | capped 100% |   0.4 GB
+  bs    128 |    8455.1 img/s |     15.14 ms/batch |   498 W |   58.878 mJ/img |  1610 MHz | capped 100% |   0.6 GB
+  bs    128 |    8387.3 img/s |     15.26 ms/batch |   496 W |   59.170 mJ/img |  1663 MHz | capped 100% |   0.6 GB
+  bs    128 |    8451.5 img/s |     15.15 ms/batch |   499 W |   59.044 mJ/img |  1615 MHz | capped 100% |   0.6 GB
+  bs    256 |    8592.5 img/s |     29.79 ms/batch |   499 W |   58.104 mJ/img |  1597 MHz | capped 100% |   1.2 GB
+  bs    256 |    8552.4 img/s |     29.93 ms/batch |   498 W |   58.204 mJ/img |  1631 MHz | capped 100% |   1.2 GB
+  bs    256 |    8509.9 img/s |     30.08 ms/batch |   497 W |   58.447 mJ/img |  1655 MHz | capped 100% |   1.2 GB
+  bs    512 |    8673.1 img/s |     59.03 ms/batch |   499 W |   57.496 mJ/img |  1589 MHz | capped 100% |   2.3 GB
+  bs    512 |    8673.1 img/s |     59.03 ms/batch |   497 W |   57.297 mJ/img |  1589 MHz | capped 100% |   2.3 GB
+  bs    512 |    8686.5 img/s |     58.94 ms/batch |   498 W |   57.324 mJ/img |  1581 MHz | capped 100% |   2.3 GB
+  bs   1024 |    8772.3 img/s |    116.73 ms/batch |   499 W |   56.835 mJ/img |  1578 MHz | capped 100% |   4.4 GB
+  bs   1024 |    8747.2 img/s |    117.07 ms/batch |   499 W |   57.007 mJ/img |  1583 MHz | capped 100% |   4.4 GB
+  bs   1024 |    8757.9 img/s |    116.92 ms/batch |   499 W |   56.960 mJ/img |  1586 MHz | capped 100% |   4.4 GB
+  bs   2048 |    8801.2 img/s |    232.70 ms/batch |   499 W |   56.651 mJ/img |  1586 MHz | capped 100% |   8.8 GB
+  bs   2048 |    8795.4 img/s |    232.85 ms/batch |   498 W |   56.607 mJ/img |  1592 MHz | capped 100% |   8.8 GB
+  bs   2048 |    8803.3 img/s |    232.64 ms/batch |   499 W |   56.639 mJ/img |  1587 MHz | capped 100% |   8.8 GB
+  bs   4096 |    8781.3 img/s |    466.44 ms/batch |   498 W |   56.721 mJ/img |  1598 MHz | capped 100% |  17.4 GB
+  bs   4096 |    8781.8 img/s |    466.42 ms/batch |   497 W |   56.595 mJ/img |  1600 MHz | capped 100% |  17.4 GB
+  bs   4096 |    8779.6 img/s |    466.54 ms/batch |   498 W |   56.710 mJ/img |  1603 MHz | capped 100% |  17.4 GB
+  bs   8192 |    8741.1 img/s |    937.18 ms/batch |   497 W |   56.820 mJ/img |  1592 MHz | capped 100% |  34.8 GB
+  bs   8192 |    8752.4 img/s |    935.97 ms/batch |   496 W |   56.655 mJ/img |  1589 MHz | capped 100% |  34.8 GB
+  bs   8192 |    8747.0 img/s |    936.55 ms/batch |   496 W |   56.757 mJ/img |  1593 MHz | capped 100% |  34.8 GB
+  bs  16384 |    8668.5 img/s |   1890.07 ms/batch |   495 W |   57.095 mJ/img |  1624 MHz | capped 100% |  69.4 GB
+  bs  16384 |    8666.0 img/s |   1890.62 ms/batch |   495 W |   57.103 mJ/img |  1629 MHz | capped 100% |  69.4 GB
+  bs  16384 |    8671.2 img/s |   1889.47 ms/batch |   495 W |   57.088 mJ/img |  1623 MHz | capped 100% |  69.4 GB
+  bs  32768 | OOM -> largest batch for this model: 16384
+
+results: ../results/v2_results/bench_1465846/bench.csv
+=== JOB_STATISTICS ===
+=== current date     : Fri Nov 27 12:17:11 CET 2026
+= Job-ID             : 1468557 on helma
+= Job-Name           : vision-bench
+= Job-Command        : /hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2/run_bench.sbatch
+= Initial workdir    : /hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2
+= Queue/Partition    : h100
+= Slurm account      : ihpc with QOS=normal
+= Requested resources: cpu=32,mem=175G,node=1,billing=32,gres/gpu=1,gres/gpu:h100=1 for 01:00:00
+= Elapsed runtime    : 00:28:12
+= Total RAM usage    : 6.1 GiB of assigned 175 GiB (3.5%)
+= Node list          : h14-03
+= Subm/Elig/Start/End: 2026-11-27T11:47:29 / 2026-11-27T11:47:29 / 2026-11-27T11:48:59 / 2026-11-27T12:17:11
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/hpc              23.5G   104.9G   209.7G        N/A     178      300K     400K        N/A    
+    /hnvme                 23.3G     0.0K     0.0K        N/A     747       61K      81K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA H100, 00000000:26:00.0, 2235174, 0 %, 0 %, 518 MiB, 1198 ms
+NVIDIA H100, 00000000:26:00.0, 2235352, 0 %, 0 %, 518 MiB, 906 ms
+NVIDIA H100, 00000000:26:00.0, 2235605, 98 %, 46 %, 95308 MiB, 1656442 ms
