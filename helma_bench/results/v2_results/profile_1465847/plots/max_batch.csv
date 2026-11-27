@@ -1,0 +1,8 @@
+model,largest_batch,peak_mem_GB,peak_MB_per_image,next_batch,why_next_fails
+ResNet-50,4096,80.3,19.6,8192,OOM
+ConvNeXt-T,2048,47.0,22.95,4096,OOM
+EfficientNetV2-S,2048,64.1,31.31,4096,OOM
+Swin-T,4096,64.4,15.73,8192,OOM
+ViT-S/16,16384,69.4,4.24,32768,OOM
+ViT-B/16 (IN-1k),8192,64.8,7.91,16384,OOM
+ViT-B/16 (IN-21k),8192,64.8,7.91,16384,OOM
