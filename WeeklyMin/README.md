@@ -1,3 +1,11 @@
+Nov 27
+* DONE
+- 
+* TODO
+- Understand the non-attention softmax for Swin-T
+- ViT-S is most energy efficient than EffinetNetV2-S in energy per image plot, why? Compare against performance?
+- How kernels (GEMM, attention and other) differ than others?
+
 Nov 16
 * DONE
 - Added 7 models from timm's library and proposal
