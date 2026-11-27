@@ -8,6 +8,7 @@ Writes to ../results/v2_results/bench_<jobid>/plots/:
   energy.png       joules per image vs batch size
   power.png        average GPU power vs batch size, with the power limit
   sm_clock.png     SM clock vs batch size (drops when the power limit is reached)
+  memory.png       peak GPU memory vs batch size; ✕ marks the batch size that ran out of memory
   summary.csv      per model: largest batch, energy at batch 1, lowest energy and its batch, peak throughput
 Each point is the mean of the 3 repeats; the raw repeats are in bench.csv.
 """
@@ -19,7 +20,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
-from matplotlib.ticker import FixedLocator, NullLocator, ScalarFormatter  # noqa: E402
+from matplotlib.ticker import FixedLocator, FuncFormatter, LogLocator, NullLocator, ScalarFormatter  # noqa: E402
 
 # one fixed name, colour and marker per model (same in every figure)
 STYLE = {
@@ -33,6 +34,8 @@ STYLE = {
 }
 # same network or same speed as another model -> dashed + hollow so both lines stay visible
 HOLLOW = {"vit_base_patch16_224.augreg_in1k", "resnet50.a1_in1k"}
+# Total memory of Helma's H100 as PyTorch counts it (total_memory / 1e9). NVIDIA sells it as "94 GB" (= 93 GiB).
+GPU_MEMORY_GB = 99.96
 
 plt.rcParams.update({
     "font.size": 11, "axes.titlesize": 13, "axes.titlelocation": "left", "axes.labelsize": 12,
@@ -89,6 +92,55 @@ batch_plot("J_per_img", "Energy per image (J)", "Energy per image", "energy.png"
 batch_plot("avg_power_W", "Average GPU power (W)", "GPU power", "power.png", hline=(limit, f"Power limit ({limit:.0f} W)"))
 batch_plot("sm_clock_MHz", "Mean SM clock (MHz)", "SM clock (lowered when the power limit is reached)", "sm_clock.png")
 
+
+# ---- memory: where each model runs out of GPU memory
+def memory_plot():
+    """Peak memory per batch size. ✕ = the next batch size, which ran out of memory.
+    Its height is an estimate: memory doubles when the batch doubles (true for every model here);
+    it is drawn at least just above the limit, since the run did fail (cuDNN also needs scratch space)."""
+    fig, ax = plt.subplots(figsize=(9, 5))
+    oom = raw[raw.status == "OOM"].groupby("model").batch_size.min()
+    top = GPU_MEMORY_GB
+    for m in sorted(df.model.unique(), key=lambda m: -oom.get(m, 1e9)):   # legend order = who fits most
+        g = df[df.model == m].sort_values("batch_size")
+        name, color, marker = style(m)
+        kw = dict(linestyle=(0, (5, 3)), markerfacecolor="white", markeredgewidth=2) if m in HOLLOW else {}
+        ax.plot(g.batch_size, g.peak_mem_GB, color=color, marker=marker, markersize=6, linewidth=2, label=name,
+                zorder=3 if m in HOLLOW else 2, **kw)
+        if m in oom:
+            last = g.iloc[-1]
+            est = max(2 * last.peak_mem_GB, GPU_MEMORY_GB * 1.04)   # it failed, so draw it above the limit
+            ax.plot([last.batch_size, oom[m]], [last.peak_mem_GB, est], color=color, linestyle=":", linewidth=1.5)
+            ax.plot(oom[m], est, marker="x", color=color, markersize=10, markeredgewidth=2.5, linestyle="none")
+            top = max(top, est)
+    ax.axhspan(GPU_MEMORY_GB, top * 1.3, color="#f1f0ec", zorder=0)
+    ax.axhline(GPU_MEMORY_GB, color="#5f5e5a", linestyle="--", linewidth=1.5)
+    ax.text(1, GPU_MEMORY_GB * 1.02, f"GPU memory limit {GPU_MEMORY_GB:.0f} GB  ·  above = does not fit",
+            fontsize=9, color="#5f5e5a", va="bottom")
+    ax.plot([], [], marker="x", color="#5f5e5a", linestyle=":", markersize=9, markeredgewidth=2.5,
+            label="next batch size: out of memory\n(height = estimate, ≈ 2× the last one)")
+    xs = sorted(set(df.batch_size) | set(oom))
+    ax.set_xscale("log", base=2)
+    ax.xaxis.set_major_locator(FixedLocator(xs))
+    ax.xaxis.set_major_formatter(ScalarFormatter())
+    ax.xaxis.set_minor_locator(NullLocator())
+    ax.tick_params(axis="x", labelrotation=45)
+    ax.set_yscale("log")   # memory doubles with batch: log axis shows every point, not just the last few
+    ax.yaxis.set_major_locator(LogLocator(base=10, subs=(1, 2, 5)))
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}"))
+    ax.yaxis.set_minor_locator(NullLocator())
+    ax.set_ylim(bottom=0.05, top=top * 1.3)
+    ax.set_xlabel("Batch size")
+    ax.set_ylabel("Peak GPU memory (GB, log scale)")
+    ax.set_title(f"GPU memory vs batch size  ·  {gpu}, {precision}")
+    ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1), borderaxespad=0)
+    fig.savefig(os.path.join(out, "memory.png"))
+    plt.close(fig)
+
+
+if "peak_mem_GB" in df:
+    memory_plot()
+
 # ---- summary table
 rows = []
 for m in [m for m in STYLE if m in set(df.model)]:
@@ -103,4 +155,4 @@ for m in [m for m in STYLE if m in set(df.model)]:
 summary = pd.DataFrame(rows)
 summary.to_csv(os.path.join(out, "summary.csv"), index=False)
 print(summary.to_string(index=False))
-print(f"\nsaved throughput.png, energy.png, power.png, sm_clock.png, summary.csv in {out}")
+print(f"\nsaved throughput.png, energy.png, power.png, sm_clock.png, memory.png, summary.csv in {out}")

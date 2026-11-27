@@ -12,13 +12,15 @@ TABLES
   max_batch.csv            largest batch that fits per model, its memory, and why the next one failed
 
 FIGURES
-  kernel_types_bs<B>.png   share of GPU time per kernel type (matmul, convolution, norm, ...)
+  kernel_types_bs<B>.png   share of GPU time per kernel type at batch B (matmul, convolution, norm, ...)
   layers_bs<B>.png         share of GPU time per layer group (attention, MLP, convolution, ...)
   roofline_bs<B>.png       achieved TFLOP/s vs FLOPs per byte for each layer group -> compute or memory bound
   time_per_image.png       GPU time per image vs batch size, all models
   scaling_by_layer.png     time per image of each layer group vs batch size, one panel per model
+  kernel_types_by_batch.png  share of GPU time per kernel type at EVERY batch size, one panel per model
+  layers_by_batch.png      share of GPU time per layer group at EVERY batch size, one panel per model
   launch_overhead.png      share of time lost to CPU-side kernel launching vs batch size
-  memory.png               peak GPU memory vs batch size, up to the largest batch that fits
+  memory.png               peak GPU memory vs batch size; ✕ marks the batch size that ran out of memory
 """
 import argparse
 import json
@@ -30,7 +32,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
-from matplotlib.ticker import FixedLocator, NullLocator, ScalarFormatter  # noqa: E402
+from matplotlib.ticker import FixedLocator, FuncFormatter, LogLocator, NullLocator, ScalarFormatter  # noqa: E402
 
 MODELS = {  # fixed order and display names
     "resnet50.a1_in1k": "ResNet-50",
@@ -60,6 +62,8 @@ KIND_COLOR = dict(zip(KINDS, PALETTE))
 GROUP_MARKER = dict(zip(GROUPS, ["o", "s", "^", "D", "v", "P", "X", "*"]))
 ROLE_TO_GROUP = {r: g for g, rs in GROUPS.items() for r in rs}
 GREY = "#7a7974"
+# ViT-B IN-1k and IN-21k are the same network with identical speed: draw IN-1k dashed + hollow so both show
+HOLLOW = dict(ls=(0, (5, 3)), mfc="white", mew=2, zorder=3)
 
 plt.rcParams.update({
     "font.size": 11, "axes.titlesize": 13, "axes.titlelocation": "left", "axes.labelsize": 12,
@@ -170,17 +174,90 @@ def lines_vs_batch(summary, col, ylabel, title, out, fname, logy=False, hline=No
     end = s.loc[s.groupby("model").batch_size.idxmax()].set_index("model")[col]
     for m in sorted(in_order(s.model.unique()), key=lambda m: -end.get(m, 0)):   # legend order = line order
         d = s[s.model == m].sort_values("batch_size")
-        ax.plot(d.batch_size, d[col], color=MODEL_COLOR[m], marker="o", ms=5, lw=2, label=name(m))
+        ax.plot(d.batch_size, d[col], color=MODEL_COLOR[m], marker="o", ms=5, lw=2, label=name(m),
+                **(HOLLOW if m == "vit_base_patch16_224.augreg_in1k" else {}))
     if hline:
         ax.axhline(hline[0], color=GREY, ls="--", lw=1.2, label=hline[1])
     batch_axis(ax, sorted(s.batch_size.unique()))
     if logy:
         ax.set_yscale("log")
+        ax.yaxis.set_major_locator(LogLocator(base=10, subs=(1, 2, 5)))   # ticks at 100, 200, 500, 1000, ...
+        ax.yaxis.set_major_formatter(ScalarFormatter())
+        ax.yaxis.set_minor_locator(NullLocator())
     else:
         ax.set_ylim(bottom=0)
     ax.set_ylabel(ylabel)
     ax.set_title(title)
     legend_right(ax, fontsize=9)
+    save(fig, out, fname)
+
+
+def memory_plot(summary, gpu, out):
+    """Peak memory per batch size. ✕ = the next batch size, which ran out of memory.
+    Its height is an estimate: memory doubles when the batch doubles (true for every model here);
+    it is drawn at least just above the limit, since the run did fail (cuDNN also needs scratch space)."""
+    ok = summary[summary.status == "ok"]
+    oom = summary[summary.status == "OOM"].groupby("model").batch_size.min()
+    limit = gpu["memory_GB"]
+    top = limit
+    fig, ax = plt.subplots(figsize=(9, 5))
+    for m in sorted(in_order(ok.model.unique()), key=lambda m: -oom.get(m, 1e9)):   # legend order = who fits most
+        d = ok[ok.model == m].sort_values("batch_size")
+        ax.plot(d.batch_size, d.peak_mem_GB, color=MODEL_COLOR[m], marker="o", ms=5, lw=2, label=name(m),
+                **(HOLLOW if m == "vit_base_patch16_224.augreg_in1k" else {}))
+        if m in oom:
+            last = d.iloc[-1]
+            est = max(2 * last.peak_mem_GB, limit * 1.04)   # it failed, so draw it above the limit
+            ax.plot([last.batch_size, oom[m]], [last.peak_mem_GB, est], color=MODEL_COLOR[m], ls=":", lw=1.5)
+            ax.plot(oom[m], est, marker="x", color=MODEL_COLOR[m], ms=10, mew=2.5, ls="none")
+            top = max(top, est)
+    ax.axhspan(limit, top * 1.3, color="#f1f0ec", zorder=0)
+    ax.axhline(limit, color="#5f5e5a", ls="--", lw=1.5)
+    ax.text(1, limit * 1.02, f"GPU memory limit {limit:.0f} GB  ·  above = does not fit",
+            fontsize=9, color="#5f5e5a", va="bottom")
+    ax.plot([], [], marker="x", color="#5f5e5a", ls=":", ms=9, mew=2.5,
+            label="next batch size: out of memory\n(height = estimate, ≈ 2× the last one)")
+    batch_axis(ax, sorted(set(ok.batch_size) | set(oom)))
+    ax.set_yscale("log")   # memory doubles with batch: log axis shows every point, not just the last few
+    ax.yaxis.set_major_locator(LogLocator(base=10, subs=(1, 2, 5)))
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}"))
+    ax.yaxis.set_minor_locator(NullLocator())
+    ax.set_ylim(bottom=0.05, top=top * 1.3)
+    ax.set_ylabel("Peak GPU memory (GB, log scale)")
+    ax.set_title("GPU memory vs batch size  ·  where each model runs out")
+    legend_right(ax, fontsize=9)
+    save(fig, out, "memory.png")
+
+
+def shares_by_batch(df, key, colors, title, out, fname):
+    """One panel per model: a 100 % bar per batch size, segments = share of GPU time per category.
+    Shows how the split changes from batch 1 to the largest batch that fits."""
+    models = in_order(df.model.unique())
+    fig, axes = plt.subplots(2, 4, figsize=(18, 8.5), sharey=True)
+    for ax, m in zip(axes.flat, models):
+        share = df[df.model == m].pivot_table(index="batch_size", columns=key, values="gpu_us", aggfunc="sum").fillna(0)
+        share = share.div(share.sum(axis=1), axis=0) * 100
+        x = np.arange(len(share))
+        bottom = np.zeros(len(share))
+        for cat in colors:
+            if cat in share and share[cat].sum() > 0:
+                ax.bar(x, share[cat].values, bottom=bottom, width=0.8, color=colors[cat], edgecolor="white", linewidth=0.8)
+                bottom += share[cat].values
+        ax.set_xticks(x, [str(b) for b in share.index], rotation=90, fontsize=8)
+        ax.set_xlim(-0.6, len(share) - 0.4)
+        ax.set_ylim(0, 100)
+        ax.grid(axis="x", visible=False)
+        ax.set_title(name(m), fontsize=12)
+        ax.set_xlabel("Batch size", fontsize=10)
+    for ax in axes[:, 0]:
+        ax.set_ylabel("Share of GPU time (%)")
+    for ax in axes.flat[len(models):]:
+        ax.axis("off")
+    used = [c for c in colors if c in set(df[key])]
+    handles = [plt.Rectangle((0, 0), 1, 1, color=colors[c], label=c) for c in used]
+    axes.flat[-1].legend(handles=handles, loc="center", fontsize=10)
+    fig.suptitle(title, x=0.01, ha="left", fontsize=14)
+    fig.tight_layout()
     save(fig, out, fname)
 
 
@@ -277,10 +354,12 @@ def main():
     lines_vs_batch(summary, "us_per_img", "GPU time per image (µs)",
                    "Time per image vs batch size (CUDA graph)", out, "time_per_image.png", logy=True)
     scaling_by_layer(roles, out)
+    shares_by_batch(kernels, "kind", KIND_COLOR, "GPU time by kernel type, at every batch size", out,
+                    "kernel_types_by_batch.png")
+    shares_by_batch(roles, "group", GROUP_COLOR, "GPU time by layer, at every batch size", out, "layers_by_batch.png")
     lines_vs_batch(summary, "launch_overhead_pct", "Time lost to CPU kernel launching (%)",
                    "Launch overhead: 1 − CUDA-graph time / normal PyTorch time", out, "launch_overhead.png")
-    lines_vs_batch(summary, "peak_mem_GB", "Peak GPU memory (GB)", "GPU memory vs batch size", out, "memory.png",
-                   hline=(gpu["memory_GB"], f"GPU memory {gpu['memory_GB']:.0f} GB"))
+    memory_plot(summary, gpu, out)
     print(f"\ntables and figures in {out}")
 
 
