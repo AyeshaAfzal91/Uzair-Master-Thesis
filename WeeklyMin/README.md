@@ -9,7 +9,6 @@
 - How do different types of kernels (GEMM, attention, and others) differ in terms of performance characteristics? Examine the underlying PyTorch implementations and determine whether they are compute-bound or memory-bound using roofline analysis in profilers such as NVIDIA Nsight Compute. Investigate the performance bottlenecks. How are convolution layers (Conv1, Conv2, and Conv3×3) implemented?
 - What assumptions are being made? To what extent do they hold, and how have they been verified?
 - Why does GEMM execution time decrease, element-wise operation time increase, and attention execution time remain constant as the batch size increases?
-- Why does GEMM execution time decrease, element-wise operation time increase, and attention execution time remain constant as the batch size increases?
 - What does expand and contract mean in the MLP? what does mean by squeeze-excite? Understand them.
 
 ## Nov 16
