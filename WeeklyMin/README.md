@@ -1,10 +1,11 @@
 Nov 27
 * DONE
-- 
+- Measurements are there.
 * TODO
 - Understand the non-attention softmax for Swin-T
 - ViT-S is most energy efficient than EffinetNetV2-S in energy per image plot, why? Compare against performance?
-- How kernels (GEMM, attention and other) differ than others? Look at in-behind PyTorch code and investigate bottleneck.
+- How kernels (GEMM, attention and other) differ than others? Look at in-behind PyTorch code, which are performance characteristics -- compute-bound or memory-bound (Roofline analysis in profilers like ncu) and investigate bottleneck. How convolution (conv1, conv2, con3x3) layers are implemented?
+- What assumptions, how much hold and how did you verify?
 
 Nov 16
 * DONE
