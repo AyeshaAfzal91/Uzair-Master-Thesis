@@ -21,24 +21,7 @@ helma_bench/
 ```
 Model weights are cached in `Uzair-Master-Thesis/model/` (TORCH_HOME / HF_HOME).
 
-## Run
 
-```bash
-cd /hnvme/workspace/ihpc180h-thesis_bench/Uzair-Master-Thesis/helma_bench/script_v2
-mkdir -p ../results/v2_results/logs    # once: Slurm cannot create the log folder itself
-
-# 10-minute checks first
-sbatch run_bench.sbatch   --models resnet50.a1_in1k --max-batch 4
-sbatch run_profile.sbatch --models resnet50.a1_in1k --max-batch 4
-
-# full runs (run them one after the other, not at the same time)
-sbatch run_bench.sbatch           # ~4-8 h
-sbatch run_profile.sbatch         # ~1-3 h
-
-# plots (login node)
-SIF=../apptainer/vision_env.sif
-apptainer exec --bind /hnvme $SIF python plot_bench.py   ../results/v2_results/bench_<jobid>
-apptainer exec --bind /hnvme $SIF python plot_profile.py ../results/v2_results/profile_<jobid>
 ```
 
 ## 1. Energy & throughput — results/v2_results/bench_<jobid>/
