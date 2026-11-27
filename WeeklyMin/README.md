@@ -3,9 +3,9 @@ Nov 27
 - Measurements are there.
 * TODO
 - Understand the non-attention softmax for Swin-T
-- ViT-S is most energy efficient than EffinetNetV2-S in energy per image plot, why? Compare against performance?
-- How kernels (GEMM, attention and other) differ than others? Look at in-behind PyTorch code, which are performance characteristics -- compute-bound or memory-bound (Roofline analysis in profilers like ncu) and investigate bottleneck. How convolution (conv1, conv2, con3x3) layers are implemented?
-- What assumptions, how much hold and how did you verify?
+- ViT-S appears to be more energy-efficient than EfficientNetV2-S in terms of energy per image. Why is this the case? How does their performance compare?
+- How do different types of kernels (GEMM, attention, and others) differ in terms of performance characteristics? Examine the underlying PyTorch implementations and determine whether they are compute-bound or memory-bound using roofline analysis in profilers such as NVIDIA Nsight Compute. Investigate the performance bottlenecks. How are convolution layers (Conv1, Conv2, and Conv3×3) implemented?
+- What assumptions are being made? To what extent do they hold, and how have they been verified?
 
 Nov 16
 * DONE
